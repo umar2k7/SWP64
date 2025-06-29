@@ -22,6 +22,11 @@ python -m venv venv
 .\venv\Scripts\Activate.ps1 (если ты мазохист на PowerShell)
 ```
 
+Если всё-таки ты на PowerShell и эту команду выполнить не удалось, то один раз запусти
+```bash
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+```
+
 Теперь установи зависимости:
 ```bash
 pip install -r requirements.txt
@@ -29,7 +34,7 @@ pip install -r requirements.txt
 
 Продублируй файл ```.env.example``` в файл ```.env```: 
 ```bash
-cp .env.example .env
+copy .env.example .env
 ```
 
 
@@ -60,7 +65,7 @@ npm install
 
 Продублируй файл ```.env.local.example``` в файл ```.env.local``` (делается один раз):
 ```
-cp .env.local.example .env.local
+copy .env.local.example .env.local
 ```
 
 Запусти next.js на фронтенде:
